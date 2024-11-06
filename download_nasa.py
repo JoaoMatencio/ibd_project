@@ -1,7 +1,7 @@
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from datacore.utils.nasa import get_response, get_urls, load_xarray, write_parquet
+from nasa import get_response, get_urls, load_xarray, write_parquet
 
 URL = "https://cmr.earthdata.nasa.gov/search/granules"
 stage = "wood"
@@ -42,7 +42,7 @@ def load_fldas_land_surface(start_date, end_date):
 
 
 def __main__():
-    load_fldas_land_surface("2000-06-01", "2024-12-31")
+    load_fldas_land_surface("2023-01-01", "2023-12-31")
 
 
 if __name__ == "__main__":

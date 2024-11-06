@@ -52,7 +52,7 @@ def load_imerg_late(start_date, end_date):
 
 
 def __main__():
-    load_imerg_late("2000-06-01", "2000-06-30")
+    load_imerg_late("2023-01-01", "2023-12-30")
 
 
 if __name__ == "__main__":
