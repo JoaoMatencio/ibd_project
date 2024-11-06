@@ -1,7 +1,7 @@
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from datacore.utils.nasa import (
+from nasa import (
     generate_month_ranges,
     get_dataframe,
     get_response,
