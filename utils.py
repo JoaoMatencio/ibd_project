@@ -5,6 +5,7 @@ import urllib
 import pandas as pd
 import requests
 import xarray as xr
+from http.cookiejar import CookieJar
 
 username = #TODO Create account
 password = #TODO Create account
