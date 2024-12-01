@@ -9,6 +9,7 @@ from utils import (
     write_parquet,
 )
 
+
 def load_imerg_late_task(first_day, last_day, URL, short_name, path):
     start_str = first_day.strftime("%Y-%m-%d")
     end_str = last_day.strftime("%Y-%m-%d")
@@ -22,7 +23,7 @@ def load_imerg_late(start_date, end_date):
     URL = "https://cmr.earthdata.nasa.gov/search/granules"
     short_name = "GPM_3IMERGM"
     date_ranges = generate_month_ranges(start_date, end_date)
-    paths = [f"imerg_data_{start}_{end}.nc" for start, end in date_ranges]
+    paths = [f"imerg/imerg_data_{ix}.parquet" for ix, _  in enumerate(date_ranges)]
     with ThreadPoolExecutor(max_workers=4) as executor:
         [
             executor.submit(

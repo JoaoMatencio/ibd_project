@@ -75,8 +75,6 @@ def __main__():
     import pyspark.sql.functions as F
     from pyspark.sql import SparkSession
 
-    local = False
-
     lat_min = -33.75  # Southernmost point of Brazil (Chuí, RS)
     lat_max = 5.27  # Northernmost point of Brazil (Monte Caburaí, RR)
     lon_min = -73.99  # Westernmost point of Brazil (Mâncio Lima, AC)
@@ -85,7 +83,7 @@ def __main__():
     precipitation_factor = 1000  # cm³ to mm³
     evapotranspiration_factor = 2592000  # ss to month
 
-    path_imerg = #TODO ADD Path
+    path_imerg = 
     path_land = #TODO ADD Path
     path_processed = #TODO ADD Path
 

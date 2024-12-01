@@ -1,14 +1,16 @@
-import datetime
 import io
+import os
 import urllib
 
 import pandas as pd
-import requests
+import datetime
 import xarray as xr
 from http.cookiejar import CookieJar
+import requests
 
-username = #TODO Create account
-password = #TODO Create account
+
+username = "ericacrizolgo"
+password = "Bancodedados@UFMG2024"
 password_manager = urllib.request.HTTPPasswordMgrWithDefaultRealm()
 password_manager.add_password(None, "https://urs.earthdata.nasa.gov", username, password)
 
@@ -19,10 +21,10 @@ opener = urllib.request.build_opener(
 )
 urllib.request.install_opener(opener)
 
+
 def load_xarray(content, **xr_kwargs):
     bytes_like = io.BytesIO(content)
-    ds = xr.open_dataset(bytes_like, **xr_kwargs)
-    return ds
+    return xr.open_dataset(bytes_like, **xr_kwargs)
 
 
 def write_parquet(path, data: pd.DataFrame):
