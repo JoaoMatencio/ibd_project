@@ -1,5 +1,3 @@
-from concurrent.futures import ThreadPoolExecutor
-
 from utils import (
     generate_month_ranges,
     get_dataframe,
@@ -23,14 +21,11 @@ def load_imerg_late(start_date, end_date):
     URL = "https://cmr.earthdata.nasa.gov/search/granules"
     short_name = "GPM_3IMERGM"
     date_ranges = generate_month_ranges(start_date, end_date)
-    paths = [f"imerg/imerg_data_{ix}.parquet" for ix, _  in enumerate(date_ranges)]
-    with ThreadPoolExecutor(max_workers=4) as executor:
-        [
-            executor.submit(
-                load_imerg_late_task, first_day, last_day, URL, short_name, path
-            )
-            for (first_day, last_day), path in zip(date_ranges, paths)
-        ]
+    paths = [f"imerg/imerg_data_{ix}.parquet" for ix, _ in enumerate(date_ranges)]
+    
+    for (first_day, last_day), path in zip(date_ranges, paths):
+        load_imerg_late_task(first_day, last_day, URL, short_name, path)
+
 
 
 def __main__():
