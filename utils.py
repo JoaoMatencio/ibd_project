@@ -9,8 +9,8 @@ from http.cookiejar import CookieJar
 import requests
 
 
-username = "ericacrizolgo"
-password = "Bancodedados@UFMG2024"
+username = "username"
+password = "password"
 password_manager = urllib.request.HTTPPasswordMgrWithDefaultRealm()
 password_manager.add_password(None, "https://urs.earthdata.nasa.gov", username, password)
 
