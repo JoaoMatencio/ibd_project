@@ -1,0 +1,48 @@
+{
+    "FLDAS": {
+        "description": "Vari\u00e1veis relevantes do FLDAS para an\u00e1lise de evapotranspira\u00e7\u00e3o e temperatura.",
+        "variables": [
+            {
+                "name": "latitude",
+                "description": "Latitude dos pontos da grade."
+            },
+            {
+                "name": "longitude",
+                "description": "Longitude dos pontos da grade."
+            },
+            {
+                "name": "time",
+                "description": "Data e hora da medi\u00e7\u00e3o."
+            },
+            {
+                "name": "Evap_tavg",
+                "description": "Taxa m\u00e9dia de evapotranspira\u00e7\u00e3o (mm/s)."
+            },
+            {
+                "name": "Tair_f_tavg",
+                "description": "Temperatura m\u00e9dia do ar (K)."
+            }
+        ]
+    },
+    "IMERG": {
+        "description": "Vari\u00e1veis relevantes do IMERG para an\u00e1lise de precipita\u00e7\u00e3o.",
+        "variables": [
+            {
+                "name": "latitude",
+                "description": "Latitude dos pontos da grade."
+            },
+            {
+                "name": "longitude",
+                "description": "Longitude dos pontos da grade."
+            },
+            {
+                "name": "time",
+                "description": "Data e hora da medi\u00e7\u00e3o."
+            },
+            {
+                "name": "precipitationCal",
+                "description": "Precipita\u00e7\u00e3o calibrada (mm/h)."
+            }
+        ]
+    }
+}
