@@ -79,6 +79,14 @@ python process.py
 
 5. Use os scripts SQL para realizar as análises desejadas.
 
+## Visualização das Análises
+
+As análises dos dados processados podem ser visualizadas abaixo ou no **Grafana Snapshot** através do link:
+
+[Visualizar Análises no Grafana](https://silviofjr.grafana.net/dashboard/snapshot/sKNrtinmEveMrReWZZy3cGoTy549QQk9)
+
+![Análises no Grafana](./analises.png)
+
 ## Contribuição
 
 Sinta-se à vontade para contribuir com melhorias para este projeto. Para isso:
