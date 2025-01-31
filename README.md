@@ -4,6 +4,14 @@
 
 Este projeto tem como objetivo processar e analisar dados relacionados à precipitação e variáveis ambientais utilizando dados provenientes da NASA (como FLDAS e IMERG). Os scripts incluem funcionalidades para download, conversão e processamento de dados, além de preparação de análises em SQL.
 
+## Visualização das Análises
+
+As análises dos dados processados podem ser visualizadas abaixo ou no **Grafana Snapshot** através do link:
+
+[Visualizar Análises no Grafana](https://silviofjr.grafana.net/dashboard/snapshot/sKNrtinmEveMrReWZZy3cGoTy549QQk9)
+
+![Análises no Grafana](./analises.png)
+
 ## Estrutura de Diretórios
 
 A estrutura principal do projeto é a seguinte:
@@ -79,13 +87,6 @@ python process.py
 
 5. Use os scripts SQL para realizar as análises desejadas.
 
-## Visualização das Análises
-
-As análises dos dados processados podem ser visualizadas abaixo ou no **Grafana Snapshot** através do link:
-
-[Visualizar Análises no Grafana](https://silviofjr.grafana.net/dashboard/snapshot/sKNrtinmEveMrReWZZy3cGoTy549QQk9)
-
-![Análises no Grafana](./analises.png)
 
 ## Contribuição
 
